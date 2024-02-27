@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://brug5wqv7ja35"]
+
+[ext_resource type="Texture2D" uid="uid://c7kk2jq20px76" path="res://Assets/Pre_Alpha_Sprites/Basic_TileMap_PreAlpha.png" id="1_kg0kr"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rn8go"]
+texture = ExtResource("1_kg0kr")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_6260k"]
+sources/0 = SubResource("TileSetAtlasSource_rn8go")
+
+[node name="TileMap" type="TileMap"]
+tile_set = SubResource("TileSet_6260k")
+format = 2
