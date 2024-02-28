@@ -1,8 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://dvfrvfojhffr0"]
+[gd_scene load_steps=4 format=3 uid="uid://dvfrvfojhffr0"]
 
-[ext_resource type="PackedScene" uid="uid://c4yse4jvb0ajd" path="res://Scene/player.tscn" id="1_8d718"]
+[ext_resource type="PackedScene" uid="uid://38tgcgnfl7co" path="res://Scene/player.tscn" id="1_8d718"]
+[ext_resource type="PackedScene" uid="uid://cx7no5aoyo4m" path="res://Scene/tile_map_prealpha.tscn" id="2_ldw7k"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_fccvw"]
 
 [node name="Level_1" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_8d718")]
-position = Vector2(122, 318)
+position = Vector2(-25, -39)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(25, 39)
+
+[node name="TileMap" parent="." instance=ExtResource("2_ldw7k")]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+z_index = -1
+material = SubResource("CanvasItemMaterial_fccvw")

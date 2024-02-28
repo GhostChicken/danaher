@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://c4yse4jvb0ajd"]
+[gd_scene load_steps=5 format=3 uid="uid://38tgcgnfl7co"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_75exf"]
 [ext_resource type="Texture2D" uid="uid://boa40fd0hiex6" path="res://Assets/Pre_Alpha_Sprites/Pre-Alpha-Man.png" id="1_at4i1"]
