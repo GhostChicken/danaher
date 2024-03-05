@@ -22,7 +22,8 @@ func _physics_process(delta):
 	else:
 		add_friction()
 		#idle animation
-	
+	#Applying gravity to player
+	velocity.y += gravity  * delta
 	
 	#gravity
 	jump()
@@ -44,8 +45,7 @@ func player_movement():
 func play_animation():
 	pass
 func jump():
-	#Applying gravity to player
-	velocity.y += gravity 
+	
 	
 	#Jump Physics
 	if velocity.y > 0: #Player is falling

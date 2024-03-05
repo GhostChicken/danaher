@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dvfrvfojhffr0"]
 
-[ext_resource type="PackedScene" path="res://Scene/player.tscn" id="1_8d718"]
-[ext_resource type="PackedScene" path="res://Scene/tile_map_prealpha.tscn" id="2_ldw7k"]
+[ext_resource type="PackedScene" uid="uid://38tgcgnfl7co" path="res://Scene/player.tscn" id="1_8d718"]
+[ext_resource type="PackedScene" uid="uid://cx7no5aoyo4m" path="res://Scene/tile_map_prealpha.tscn" id="2_ldw7k"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_fccvw"]
 
@@ -12,11 +12,31 @@ position = Vector2(-25, -39)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(25, 39)
-
-[node name="TileMap" parent="." instance=ExtResource("2_ldw7k")]
+position_smoothing_enabled = true
+position_smoothing_speed = 2.5
+editor_draw_limits = true
+editor_draw_drag_margin = true
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 z_index = -1
 material = SubResource("CanvasItemMaterial_fccvw")
+
+[node name="ColorRect" type="ColorRect" parent="ParallaxBackground/ParallaxLayer"]
+offset_left = -2000.0
+offset_top = -2000.0
+offset_right = 2000.0
+offset_bottom = 2000.0
+color = Color(0, 0.498039, 0.501961, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="ParallaxBackground/ParallaxLayer"]
+offset_left = 41.0
+offset_top = -470.0
+offset_right = 359.0
+offset_bottom = 530.0
+color = Color(0.278431, 0.341176, 0.227451, 1)
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="TileMap" parent="." instance=ExtResource("2_ldw7k")]
