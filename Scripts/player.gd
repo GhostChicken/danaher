@@ -7,7 +7,7 @@ var jump_count = 0
 @export var max_jumps = 1
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 #var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-const acceleration = 50
+const acceleration = 60
 const friction = 70
 @export var fallMultiplier = 10
 @export var lowJumpMultiplier = 10 
